@@ -7,7 +7,7 @@ class Parent {
     @Override
     String toString() {
         return JsonOutput.prettyPrint(JsonOutput.toJson(x))
-        return getX().getClass().getName()
+        //return getX().getClass().getName()
     }
 
     Parent getX() {}
@@ -25,6 +25,7 @@ class Slave extends Parent {
     }
 
     Parent getX() {
+        Slave ()
         return this
     }
 }
