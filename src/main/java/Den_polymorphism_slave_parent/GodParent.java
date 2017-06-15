@@ -6,11 +6,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 abstract class GodParent {
     @Override
-    public String toString () {
-        ObjectMapper mapper  = new ObjectMapper();
-        mapper.setVisibilityChecker(mapper.getSerializationConfig().getDefaultVisibilityChecker()
-                .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
-                .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
+    public String toString() {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setVisibilityChecker(
+                mapper.getSerializationConfig()
+                        .getDefaultVisibilityChecker()
+                        .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+                        .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
         );
 
         String result = "";
